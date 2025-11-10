@@ -2,6 +2,8 @@
 
 A full-stack web application that predicts Premier League match outcomes using machine learning.
 
+🔗 **Live Demo:** [https://premier-league-match-predictor.vercel.app/](https://premier-league-match-predictor.vercel.app/)
+
 ## Project Structure
 
 ```
