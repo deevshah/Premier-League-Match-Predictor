@@ -1,6 +1,6 @@
 """Configuration settings for the API"""
 from pydantic_settings import BaseSettings
-from typing import List
+from typing import List, Optional
 
 
 class Settings(BaseSettings):
@@ -17,8 +17,8 @@ class Settings(BaseSettings):
     cors_origins: List[str] = [
         "http://localhost:3000",
         "https://localhost:3000",
-        # Add your Vercel deployment URL here
     ]
+    cors_origin_regex: Optional[str] = r"https://.*\.vercel\.app"
     
     # Model paths
     model_file_path: str = "data/model.joblib"
@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     
     model_config = {
         "env_file": ".env",
-        "protected_namespaces": ('settings_',)
+        "protected_namespaces": ('settings_',),
     }
 
 
