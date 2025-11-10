@@ -1,0 +1,57 @@
+{
+  "feature_columns": [
+    "venue_code",
+    "opponent_code",
+    "hour",
+    "day_code",
+    "GF_rolling",
+    "GA_rolling",
+    "Sh_rolling",
+    "SoT_rolling",
+    "Dist_rolling",
+    "FK_rolling",
+    "PK_rolling",
+    "PKatt_rolling"
+  ],
+  "rolling_features": [
+    "GF_rolling",
+    "GA_rolling",
+    "Sh_rolling",
+    "SoT_rolling",
+    "Dist_rolling",
+    "FK_rolling",
+    "PK_rolling",
+    "PKatt_rolling"
+  ],
+  "base_features": [
+    "venue_code",
+    "opponent_code",
+    "hour",
+    "day_code"
+  ],
+  "rolling_window": 3,
+  "rolling_cols": [
+    "GF",
+    "GA",
+    "Sh",
+    "SoT",
+    "Dist",
+    "FK",
+    "PK",
+    "PKatt"
+  ],
+  "model_type": "RandomForestClassifier",
+  "model_params": {
+    "n_estimators": 50,
+    "min_samples_split": 10,
+    "random_state": 1
+  },
+  "trained_date": "2025-11-05T23:51:53.567612",
+  "train_samples": 268,
+  "test_accuracy": 0.6208651399491094,
+  "test_precision": 0.5246913580246914,
+  "target_classes": [
+    "Loss/Draw",
+    "Win"
+  ]
+}
